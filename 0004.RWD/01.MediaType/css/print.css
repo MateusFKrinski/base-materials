@@ -1,0 +1,15 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    size: 16px;
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+a::after{
+    content: '( ' attr(href) ' )';
+    display: inline-block;
+    margin: 0 10px;
+}

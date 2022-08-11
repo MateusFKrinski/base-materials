@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Thumb</title>
+
+        <style>
+                
+            body{
+                font-family: sans-serif;
+            }
+        
+            a{
+                display: block;
+                margin: 10px;
+                position: relative;
+            }
+           
+            a img{
+                width: 50%;
+                display: block;
+            }
+            
+            a:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left:0;
+                width: 50%;
+                height: 100%;
+                background: transparent;
+                transition: all .5s;
+            }
+            
+            a:hover:before{
+            background: rgba(0,0,0,.5); 
+            } 
+            
+            a:after{
+                opacity: 0;
+            }
+            
+            a:hover:after{
+                content: 'Veja';
+                display: block;
+                position: absolute;
+                border: 3px solid white;
+                color: white;
+                top: 50%;
+                left: 25%;
+                padding: 10px 20px;
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }   
+        
+        </style>
+
+    </head>
+
+    <body>
+        
+        <section>
+
+            <article>
+                <a href="#">
+                    <img src="./img/01.jpg" alt="imagem de thumb">
+                </a>
+            </article>
+
+        </section>
+
+        <section>
+
+            <article>
+                <a href="#">
+                    <img src="./img/02.jpg" alt="imagem de thumb">
+                </a>
+            </article>
+
+        </section>
+
+        <section>
+
+            <article>
+                <a href="#">
+                    <img src="./img/03.jpg" alt="imagem de thumb">
+                </a>
+            </article>
+
+        </section>
+
+        <section>
+
+            <article>
+                <a href="#">
+                    <img src="./img/04.jpg" alt="imagem de thumb">
+                </a>
+            </article>
+
+        </section>
+        
+        <section>
+
+            <article>
+                <a href="#">
+                    <img src="./img/05.jpg" alt="imagem de thumb">
+                </a>
+            </article>
+
+        </section>
+
+        <section>
+
+            <article>
+                <a href="#">
+                    <img src="./img/06.jpg" alt="imagem de thumb">
+                </a>
+            </article>
+
+        </section>
+
+    </body>
+    
+</html>

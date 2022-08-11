@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+
+    <style>
+
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .body{
+            border: .5em solid rgb(63, 63, 63);
+            width: 50%;
+            height: auto;
+            margin: auto;
+            text-align: center;
+            padding: 0;
+        }
+
+        h1{
+            text-transform: uppercase;
+            font-size: 2em;
+        }
+
+        iframe{
+            margin: 6.25em 0;
+            width: 43.75em;
+            height: 31.25em;
+        }
+
+        /* figure img{
+            margin: 0 1%;
+            width: 98%;
+            height: 300px;
+        } */
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="body">
+
+        <h1>áudio</h1>
+
+        <audio controls> 
+    
+            <source  src="mozart_trompa.mp3" type="audio/mp3">
+            <source  src="mozart_trompa.ogg" type="audio/ogg">
+    
+            <p>seu browser não suporta esse recurso</p>
+    
+        </audio>
+    
+        <h1>vídeo</h1>
+    
+        <video controls>
+            
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.ogv" type="video/ogv">
+            <source src="video.webm" type="video/webm">
+    
+            <p>seu browser não suporta esse recurso</p>
+    
+        </video>
+
+        <iframe src="https://www.youtube.com/embed/ypkgLIBShAY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <!-- <figure>  PODE ESTAR ERRADO SEU USO -> USAR TAG QUANDO O CONTEÚDO TER DISPONIBILIDADE DE ESTAR EM QUALQUER LUGAR DA PÁGINA, MAS NÃO AFETAR A INTERPRETAÇÃO
+
+            <img src="bg_topo_1198x670.jpg" alt="imagem de montanhas">
+
+            <caption>legenda da imagem</caption>
+
+        </figure> -->
+
+    </div>
+
+</body>
+</html>

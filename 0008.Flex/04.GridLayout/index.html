@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Layout</title>
+
+        <style>
+
+            .grid-container{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+            }
+
+            .grid-item{
+                background-color: orange;
+                padding: 15px;
+                font-family: sans-serif;
+            }
+
+            /* GRID */
+
+            .grid-container{
+                display: grid;
+                grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end];
+                grid-template-rows: [header-start] 100px [header-end nav-start] 50px [nav-end main-start] 1fr [main-end footer-start] 50px [footer-end];
+                grid-gap: 20px;    
+            }
+
+            .header{
+                grid-column: col1-start / col3-end;
+                /* grid-row: header-start / header-end; */
+                grid-row: header;
+            }
+
+            .nav{
+                grid-column: col1-start / col3-end;
+                /* grid-row: nav-start / nav-end; */
+                grid-row: nav;
+            }
+
+            .aside{
+                grid-column: col3-start / col3-end;
+                grid-row: main-start / footer-end;
+            }
+
+            .main{
+                min-height: 200px;
+                grid-column: col1-start / col2-end;
+                /* grid-row: main-start / main-end; */
+                grid-row: main;
+            }
+
+            .footer{
+                grid-column: col1-start / col3-end;
+                grid-row: footer-start / footer-end;
+
+                background-color: rgba(255, 0, 0, 0.5);
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        
+        <h2>Grid Layout</h2>
+        
+        
+        <div class="grid-container">
+
+            <header class="header grid-item">header</header>
+
+            <nav class="nav grid-item">nav</nav>
+
+            <aside class="aside grid-item">aside</aside>
+
+            <main class="main grid-item">
+                main
+            </main>
+
+            <footer class="footer grid-item">footer</footer>
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>DOM</title>
+
+        <style>
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                background-color: rgb(0, 0, 0);
+            }
+
+            div{
+                background-color: white;
+                color: black;
+            }
+
+            article:not(.dif){
+                color: white;
+            }
+            
+            article:nth-child(1) a{
+                color: red;
+            }
+
+            article:nth-child(3) > p{
+                color: red;
+            }
+
+            article:nth-child(5) h3 + p{
+                color: red;
+            }
+
+            article:nth-child(7) h3 ~ p{
+                color: blue;
+            }
+
+            .dif{
+                background-color: white;
+            }
+
+            a[href="#"]{
+                opacity: .2;
+            }
+
+            a[href="http"]{
+                color: green;
+            }
+
+            a[title]{
+                text-decoration: none;
+            }
+            
+            a[href$=".pdf"]{
+                color: black;
+                text-decoration: none;
+            }
+            
+            a[href$=".pdf"]:hover{
+                color: rgb(41, 192, 242);
+                text-decoration: none;
+                transition: .5s;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <article>
+            <h3>
+                TÍTULO
+            </h3>
+            <p>
+                PARÁGRAFO
+                <a href="a">
+                    <b>
+                        LINK A
+                    </b>
+                </a>
+            </p>
+            <p>
+                PARÁGRAFO
+                <a href="a">
+                    <b>
+                        LINK A
+                    </b>
+                </a>
+            </p>
+            <p>
+                PARÁGRAFO
+                <a href="#">
+                    <b>
+                        LINK A 
+                    </b>
+                </a>
+            </p>
+        </article>
+
+        <hr>
+
+        <article>
+            <h3>
+                TÍTULO
+            </h3>
+            <p>
+                PARÁGRAFO
+                <a href="#">
+                    <b>
+                        LINK A
+                    </b>
+                </a>
+            </p>
+            <p>
+                PARÁGRAFO
+                <a href="a">
+                    <b>
+                        LINK A
+                    </b>
+                </a>
+            </p>
+            <p>
+                PARÁGRAFO
+                <a href="a">
+                    <b>
+                        LINK A 
+                    </b>
+                </a>
+            </p>
+        </article>
+
+        <hr>
+
+        <article>
+            <h3>
+                TÍTULO
+            </h3>
+            <p>
+                PARÁGRAFO
+                <a href="a">
+                    <b>
+                        LINK A
+                    </b>
+                </a>
+            </p>
+            <p>
+                PARÁGRAFO
+                <a href="#">
+                    <b>
+                        LINK A
+                    </b>
+                </a>
+            </p>
+            <p>
+                PARÁGRAFO
+                <a href="a">
+                    <b>
+                        LINK A 
+                    </b>
+                </a>
+            </p>
+        </article>
+
+        <hr>
+
+        <article>
+            <h3>
+                TÍTULO
+            </h3>
+            <p>
+                PARÁGRAFO
+                <a href="#">
+                    <b>
+                        LINK A
+                    </b>
+                </a>
+            </p>
+            <p>
+                PARÁGRAFO
+                <a href="a">
+                    <b>
+                        LINK A
+                    </b>
+                </a>
+            </p>
+            <p>
+                PARÁGRAFO
+                <a href="#">
+                    <b>
+                        LINK A 
+                    </b>
+                </a>
+            </p>
+        </article>
+        <hr>
+        <article class="dif">
+            <h3>
+                TÍTULO
+            </h3>
+            <p>
+                PARÁGRAFO
+                <a href="a">
+                    <b>
+                        LINK A
+                    </b>
+                </a>
+            </p>
+            <p>
+                PARÁGRAFO
+                <a href="a">
+                    <b>
+                        LINK A
+                    </b>
+                </a>
+            </p>
+            <p>
+                PARÁGRAFO
+                <a href="a">
+                    <b>
+                        LINK A 
+                    </b>
+                </a>
+            </p>
+        </article>
+
+        <div>
+            <a href="#">Link Falso</a><br>
+            <a href="http">Link Externo</a><br>
+            <a href="a.pdf">Link Externo</a><br>
+            <a href="a">Link Externo</a><br>
+            <a href="a" title="titulo">Link Externo</a>
+        </div>
+
+    </body>
+    
+</html>
