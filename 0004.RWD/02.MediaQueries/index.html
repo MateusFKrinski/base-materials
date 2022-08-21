@@ -1,75 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>media queries</title>
 
     <style>
+      body {
+        background-color: yellow;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+      }
 
-        body{
-            background-color: yellow;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
+      .teste {
+        background: red;
+        margin-left: 5%;
+        width: 90%;
+        height: 50px;
+      }
+
+      .container {
+        background-color: white;
+        padding: 15px;
+        font-size: 24px;
+      }
+
+      .container div {
+        background-color: #ccc;
+        margin-bottom: 15px;
+        height: 150px;
+      }
+
+      .container div:last-child {
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: 400px) {
+        body {
+          background-color: orange;
         }
-
-        .teste{
-            background: red;
-            margin-left: 5%;
-            width: 90%;
-            height: 50px;
+        .container div {
+          width: 48%;
+          float: left;
+          margin: 1%;
         }
-
-        .container{
-            background-color: white;
-            padding: 15px;
-            font-size: 24px;
+        .clearfix::after {
+          content: " ";
+          display: block;
+          clear: both;
         }
-
-        .container div{
-            background-color: #ccc;
-            margin-bottom: 15px;
-            height: 150px;
-        }
-
-        .container div:last-child{
-            margin-bottom: 0;
-        }
-
-        @media screen and (min-width: 400px) {
-            body{
-                background-color: orange;
-            }
-            .container div{
-                width: 48%;
-                float: left;
-                margin: 1%;
-            }
-            .clearfix::after{
-                content: ' ';
-                display: block;
-                clear: both;
-            }
-        }
-
+      }
     </style>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container clearfix">
-        <div>div 1</div>
-        <div>div 2</div>
-        <div>div 3</div>
-        <div>div 4</div>
-        <div>div 5</div>
-        <div>div 6</div>
-        <div>div 7</div>
-        <div>div 8</div>
+      <div>div 1</div>
+      <div>div 2</div>
+      <div>div 3</div>
+      <div>div 4</div>
+      <div>div 5</div>
+      <div>div 6</div>
+      <div>div 7</div>
+      <div>div 8</div>
     </div>
-
-</body>
+  </body>
 </html>

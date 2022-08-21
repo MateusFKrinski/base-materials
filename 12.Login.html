@@ -1,83 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <head>
+    <title>login</title>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      #formUm {
+        width: 250px;
+        margin: 50px auto 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-        <title>login</title>
+      #formUm fieldset {
+        background-color: rgb(149, 149, 149);
+        border: 1px solid black;
+        border-radius: 20px;
+      }
 
-        <style>
+      #formUm legend {
+        background-color: white;
+        display: inline-block;
+        border-radius: 20px;
+        border: 1px solid black;
+      }
 
-            #formUm{
-                width: 250px;
-                margin: 50px auto 0;
-                font-family: Arial, Helvetica, sans-serif;
-            }
+      #formUm label {
+        margin-top: 25px;
+        display: block;
+        margin-bottom: 5px;
+      }
 
-            #formUm fieldset{
-                background-color: rgb(149, 149, 149);
-                border: 1px solid black;
-                border-radius: 20px;
-            }
+      #user,
+      #pass,
+      #btn {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        font-size: 18px;
+        border: 1px solid black;
+        background-color: rgb(183, 183, 183);
+        border-radius: 20px;
+      }
 
-            #formUm legend{
-                background-color: white;
-                display: inline-block;
-                border-radius: 20px;
-                border: 1px solid black;
-            }
+      #user:focus,
+      #pass:focus {
+        background-color: rgb(255, 255, 255);
+      }
 
-            #formUm label{
-                margin-top: 25px;
-                display: block;
-                margin-bottom: 5px;
-            }
+      #btn {
+        margin-top: 15px;
+      }
 
-            #user, #pass, #btn{
-                display: block;
-                width: 100%;
-                box-sizing: border-box;
-                padding: 15px;
-                font-size: 18px;
-                border: 1px solid black;
-                background-color: rgb(183, 183, 183);
-                border-radius: 20px;
-            }
+      #user {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
 
-            #user:focus, #pass:focus{
-                background-color: rgb(255, 255, 255);
-            }
+  <body>
+    <h1>formulario</h1>
 
-            #btn{
-                margin-top: 15px;
-            }
-
-            #user{
-                margin-bottom: 15px;
-            }
-
-        </style>
-
-    </head>
-
-    <body>
-
-        <h1>formulario</h1>
-
-        <form action="#" method="post" id="formUm">
-            <fieldset>
-                <legend>Login</legend>
-                <label for="user">Digite seu usuário</label>
-                <input type="text" name="user" id="user" autofocus="on"> 
-                <label for="pass">Digite sua senha</label>
-                <input type="password" name="pass" id="pass"> 
-                <input type="submit" name="Enviar" id="btn">
-            </fieldset>
-        </form>
-
-    </body>
-    
+    <form action="#" method="post" id="formUm">
+      <fieldset>
+        <legend>Login</legend>
+        <label for="user">Digite seu usuário</label>
+        <input type="text" name="user" id="user" autofocus="on" />
+        <label for="pass">Digite sua senha</label>
+        <input type="password" name="pass" id="pass" />
+        <input type="submit" name="Enviar" id="btn" />
+      </fieldset>
+    </form>
+  </body>
 </html>

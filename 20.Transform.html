@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <head>
+    <title>Translate</title>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Translate</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
 
-        <style>
+      .div_um {
+        width: 150px;
+        height: 150px;
+        background-color: black;
+        color: white;
+        transform: translate(100px1, 50px);
+      }
 
-            html, body{
-                height: 100%;
-                width: 100%
-            }
+      .div_dois {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
 
-            .div_um{
-                width: 150px;
-                height: 150px;
-                background-color: black;
-                color: white;
-                transform: translate(100px1, 50px);
-            }
+  <body>
+    <div class="div_um">
+      <p>roi</p>
+    </div>
 
-            .div_dois{
-                width: 150px;
-                height: 150px;
-                background-color: red;
-                color: white;
-            }
-
-        </style>
-
-    </head>
-
-    <body>
-
-        <div class="div_um">
-            <p>roi</p>
-        </div>
-
-        <div class="div_dois">
-            <p>Tshau</p>
-        </div>
-
-    </body>
-    
+    <div class="div_dois">
+      <p>Tshau</p>
+    </div>
+  </body>
 </html>

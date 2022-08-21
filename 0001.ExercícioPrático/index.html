@@ -1,93 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
-    <head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Projeto Prático</title>
+    <title>Projeto Prático</title>
 
-        <style>     
+    <style>
+      body {
+        font-family: sans-serif;
+      }
 
-            body{
-                font-family: sans-serif;
-            }
+      a[target="_blank"]:after {
+        display: inline-block;
+        margin-left: 5px;
+      }
 
-            a[target="_blank"]:after{
-                display: inline-block;
-                margin-left: 5px;                    
-            }
-     
-            a[href$='.pdf']:before{
-                display: inline-block;
-                margin-right: 5px;
-            }
+      a[href$=".pdf"]:before {
+        display: inline-block;
+        margin-right: 5px;
+      }
 
-            .chk{
-                display: inline-block;
-                border: 2px solid #bbb;
-                background: #ddd;
-                width: 15px;
-                height: 15px;
-                margin-right: 10px
-            }
-     
-            label{
-                height: 15px;
-                display: inline-block;
-            }
-     
-            input[type="checkbox"]{
-                width: 1px;
-                height:1px;
-                overflow: hidden;
-                visibility: hidden;
-                display: inline-block;
-                margin: 0;
-            }
-     
-            input[type="checkbox"] + label .chk{
-                border-radius: 5px;
-            }
+      .chk {
+        display: inline-block;
+        border: 2px solid #bbb;
+        background: #ddd;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+      }
 
-            input[type="checkbox"]:checked + label .chk{
-                background: #555;
-                position: relative;
-            }
+      label {
+        height: 15px;
+        display: inline-block;
+      }
 
-            input[type="checkbox"]:checked + label .chk:before{
-                content: '';
-                display: block;
-                position: absolute;
-                top: 4px;
-                bottom: 4px;
-                left: 4px;
-                right: 4px;
-                border: 2px solid white;
-                transform: rotate(45deg);
-                border-radius: 50px;
-                box-sizing: border-box;               
-            }
+      input[type="checkbox"] {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        visibility: hidden;
+        display: inline-block;
+        margin: 0;
+      }
 
-        </style>
+      input[type="checkbox"] + label .chk {
+        border-radius: 5px;
+      }
 
-    </head>
+      input[type="checkbox"]:checked + label .chk {
+        background: #555;
+        position: relative;
+      }
 
-    <body>
+      input[type="checkbox"]:checked + label .chk:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        left: 4px;
+        right: 4px;
+        border: 2px solid white;
+        transform: rotate(45deg);
+        border-radius: 50px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
 
-        <h1>Estrutura Básica</h1>
+  <body>
+    <h1>Estrutura Básica</h1>
 
-        <a href="http:://serfrontend.com" target="_blank">Link externo</a>
-        <a href="qq.pdf">Download do PDF</a>
+    <a href="http:://serfrontend.com" target="_blank">Link externo</a>
+    <a href="qq.pdf">Download do PDF</a>
 
-        <hr>
+    <hr />
 
-        <input type="checkbox" name="qq" id="chk">
-        <label for="chk">
-            <span class="chk"></span>read and acept this contract
-        </label>
-
-    </body>
+    <input type="checkbox" name="qq" id="chk" />
+    <label for="chk">
+      <span class="chk"></span>read and acept this contract
+    </label>
+  </body>
 </html>

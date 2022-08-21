@@ -1,163 +1,182 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <head>
+    <title></title>
 
-     	<meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      html,
+      body {
+        margin-left: 0;
+        margin-top: 0;
+        padding: 0;
+      }
 
-	    <title></title>
+      .header {
+        margin: 0;
+        padding: 0;
+        background: black;
+        width: 100%;
+        height: 50px;
+        position: fixed;
+      }
 
-	    <style>
+      .content {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
 
-            html, body{
-                margin-left: 0;
-                margin-top: 0;
-                padding: 0;
-            }
+      .colors {
+        margin: 70px auto;
+        border: 5px solid rgb(0, 0, 0);
+        height: 300px;
+        width: 80%;
+      }
 
-            .header{
-                margin: 0;
-                padding: 0;
-                background: black;
-                width: 100%;
-                height: 50px;
-                position: fixed;
-            }
+      .colors:nth-child(1) {
+        background: linear-gradient(
+          rgba(23, 23, 142, 0.504),
+          transparent,
+          transparent,
+          rgba(23, 23, 142, 0.504)
+        );
+      }
 
-            .content{
-                display: grid;
-                grid-gap: 10px;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
+      .colors:nth-child(2) {
+        background: linear-gradient(
+          rgba(140, 220, 118, 0.7),
+          transparent,
+          transparent,
+          rgba(178, 194, 58, 0.7)
+        );
+      }
 
-            .colors{
-                margin: 70px auto;             
-                border: 5px solid rgb(0, 0, 0);
-                height: 300px;
-                width: 80%;
-            } 
-            
-            .colors:nth-child(1){ 
-                background: linear-gradient(rgba(23, 23, 142, 0.504), transparent, transparent, rgba(23, 23, 142, 0.504));                
-            }
+      .colors:nth-child(3) {
+        background: linear-gradient(
+          rgba(112, 179, 250, 0.7),
+          transparent,
+          transparent,
+          rgba(175, 124, 190, 0.7)
+        );
+      }
 
-            .colors:nth-child(2){
-                background: linear-gradient(rgba(140, 220, 118, 0.7), transparent, transparent, rgba(178, 194, 58, 0.7));                
-            }
+      .colors:nth-child(4) {
+        background: linear-gradient(
+          rgba(14, 12, 134, 0.7),
+          transparent,
+          transparent,
+          rgba(142, 23, 61, 0.7)
+        );
+      }
 
-            .colors:nth-child(3){
-                background: linear-gradient(rgba(112, 179, 250, 0.7), transparent, transparent, rgba(175, 124, 190, 0.7));                
-            }
+      .colors:nth-child(5) {
+        background: linear-gradient(
+          rgba(2, 57, 79, 0.7),
+          transparent,
+          transparent,
+          rgba(142, 23, 61, 0.7)
+        );
+      }
 
-            .colors:nth-child(4){
-                background: linear-gradient(rgba(14, 12, 134, 0.7), transparent, transparent, rgba(142, 23, 61, 0.7));                
-            }
+      .colors:nth-child(6) {
+        background: linear-gradient(
+          rgba(92, 179, 63, 0.7),
+          transparent,
+          transparent,
+          rgba(255, 0, 0, 0.7)
+        );
+      }
 
-            .colors:nth-child(5){
-                background: linear-gradient(rgba(2, 57, 79, 0.7), transparent, transparent, rgba(142, 23, 61, 0.7));                
-            }
+      .colors:nth-child(7) {
+        background: linear-gradient(
+          rgba(64, 0, 0, 0.7),
+          transparent,
+          transparent,
+          rgba(68, 2, 67, 0.7)
+        );
+      }
 
-            .colors:nth-child(6){
-                background: linear-gradient(rgba(92, 179, 63, 0.7), transparent, transparent, rgba(255, 0, 0, 0.7));                
-            }
+      .colors:nth-child(8) {
+        background: linear-gradient(
+          rgba(155, 24, 28, 0.7),
+          transparent,
+          transparent,
+          rgba(73, 137, 76, 0.7)
+        );
+      }
 
-            .colors:nth-child(7){
-                background: linear-gradient(rgba(64, 0, 0, 0.7), transparent, transparent, rgba(68, 2, 67, 0.7));                
-            }
+      .colors:nth-child(9) {
+        background: linear-gradient(
+          rgba(16, 63, 129, 0.7),
+          transparent,
+          transparent,
+          rgba(6, 114, 114, 0.7)
+        );
+      }
 
-            .colors:nth-child(8){
-                background: linear-gradient(rgba(155, 24, 28, 0.7), transparent, transparent, rgba(73, 137, 76, 0.7));                
-            }
+      .colors:nth-child(10) {
+        background: linear-gradient(
+          rgba(168, 160, 16, 0.7),
+          transparent,
+          transparent,
+          rgba(178, 104, 126, 0.7)
+        );
+      }
 
-            .colors:nth-child(9){
-                background: linear-gradient(rgba(16, 63, 129, 0.7), transparent, transparent, rgba(6, 114, 114, 0.7));                
-            }
+      .menu-header {
+        padding: 0;
+        background: transparent;
+        border: none;
+      }
 
-            .colors:nth-child(10){
-                background: linear-gradient(rgba(168, 160, 16, 0.7), transparent, transparent, rgba(178, 104, 126, 0.7));                
-            }
+      .menu {
+        margin-left: 85%;
+        margin-top: 5px;
+        width: 50px;
+        height: 7.5px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+      }
 
-            .menu-header{
-                padding: 0;
-                background: transparent;
-                border: none;
-            }
+      .menu:first-child {
+        margin-top: 8.75px;
+      }
+    </style>
+  </head>
 
-            .menu{
-                margin-left: 85%;
-                margin-top: 5px;
-                width: 50px;
-                height: 7.5px;
-                background-color: rgb(255, 255, 255);
-                border-radius: 20px;
-            }
+  <body>
+    <div class="header">
+      <a href="#" class="menu-header">
+        <div class="menu"></div>
+        <div class="menu"></div>
+        <div class="menu"></div>
+      </a>
+    </div>
 
-            .menu:first-child{
-                margin-top: 8.75px;
-            }
-            
-	    </style>
+    <div class="content">
+      <div class="colors"></div>
 
-    </head>
+      <div class="colors"></div>
 
-    <body>
+      <div class="colors"></div>
 
-        <div class="header">
+      <div class="colors"></div>
 
-            <a href="#" class="menu-header">
-                <div class="menu"></div>
-                <div class="menu"></div>
-                <div class="menu"></div>
-            </a>
+      <div class="colors"></div>
 
-        </div>
-        
-        <div class="content">
-            
-            <div class="colors">
+      <div class="colors"></div>
 
-            </div>
+      <div class="colors"></div>
 
-            <div class="colors">
-                
-            </div>
+      <div class="colors"></div>
 
-            <div class="colors">
-                
-            </div>
+      <div class="colors"></div>
 
-            <div class="colors">
-                
-            </div>
-
-            <div class="colors">
-                
-            </div>
-
-            <div class="colors">
-                
-            </div>
-
-            <div class="colors">
-
-            </div>
-
-            <div class="colors">
-                
-            </div>
-
-            <div class="colors">
-                
-            </div>
-
-            <div class="colors">
-                
-            </div>
-
-        </div>
-
-    </body>
-
+      <div class="colors"></div>
+    </div>
+  </body>
 </html>

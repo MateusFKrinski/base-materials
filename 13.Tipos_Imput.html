@@ -1,85 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <head>
+    <title>Inputs</title>
+  </head>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <body>
+    <h1>Tipos de input</h1>
 
-        <title>Inputs</title>
+    <form action="#" method="get">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="nome">Nome</label>
+        <input type="text" name="Nome" id="inpNome" maxlength="3" required />
+        <br />
+        <label for="email">E-mail</label>
+        <input type="email" name="E-mail" id="inpEmail" /> <br />
+        <label for="numero">Filhos</label>
+        <input type="number" name="Número" id="nmr" min="0" max="50" /> <br />
+        <label for="nascimento">Data nascimento</label>
+        <input
+          type="date"
+          name="nascimento"
+          id="inpNascimento"
+          min="2018-01-30"
+          max="2139-01-20"
+        />
+        <br />
+        <a>Sexo:</a>
+        <label for="genero">
+          <input type="radio" name="sexo" value="M" />Masculino
+        </label>
+        <label for="genero">
+          <input type="radio" name="sexo" value="F" />Feminino </label
+        ><br />
+        <label for="estado">Estado:</label>
+        <select name="estado" id="estado">
+          <option value="sp">São Paulo</option>
+          <option value="rj">Rio de Janeiro</option>
+          <option value="mg">Minas Gerais</option>
+        </select>
+      </fieldset>
 
-    </head>
+      <fieldset>
+        <legend>Áreas interese</legend>
+        <label><input type="checkbox" name="html" value="HTML" />HTML</label>
+        <label><input type="checkbox" name="css" value="CSS" />CSS</label>
+        <label><input type="checkbox" name="js" value="JS" />JS</label>
+      </fieldset>
 
-    <body>
+      <fieldset>
+        <legend>Mensagem</legend>
+        <textarea
+          style="resize: none"
+          name="msg"
+          id="msgDigitada"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <textarea
+          style="resize: none"
+          name="contrato"
+          id="msgContrato"
+          cols="30"
+          rows="10"
+          readonly
+        >
+Você precisa aceitar os termos abaixo:</textarea
+        >
+        <label><input type="checkbox" checked />Li e aceito</label>
+      </fieldset>
 
-        <h1>Tipos de input</h1>
+      <input type="submit" value="Mandar" id="enviar" /> <br />
+      <input type="file" name="" id="" />
+      <input type="hidden" name="" id="" />
+      <input type="button" name="" value="Botão" id="" />
+      <input type="reset" name="" id="" />
+      <input type="tel" name="" id="" />
+      <input type="url" name="" id="" />
+      <input type="range" name="" id="" min="0" max="10" step="2" />
+      <input type="time" name="" id="" />
+      <input type="color" name="" id="" />
 
-        <form action="#" method="get">
-
-            <fieldset>
-                <legend>Dados Pessoais</legend>
-                <label for="nome">Nome</label>
-                <input type="text" name="Nome" id="inpNome" maxlength="3" required> <br>
-                <label for="email">E-mail</label>
-                <input type="email" name="E-mail" id="inpEmail"> <br>
-                <label for="numero">Filhos</label>
-                <input type="number" name="Número" id="nmr" min="0" max="50"> <br>
-                <label for="nascimento">Data nascimento</label>
-                <input type="date" name="nascimento" id="inpNascimento" min="2018-01-30" max="2139-01-20"> <br>
-                <a>Sexo:</a>
-                <label for="genero"> 
-                    <input type="radio" name="sexo" value="M">Masculino
-                </label>
-                <label for="genero">
-                    <input type="radio" name="sexo" value="F">Feminino
-                </label><br>
-                <label for="estado">Estado:</label>
-                <select name="estado" id="estado">
-                    <option value="sp">São Paulo</option>
-                    <option value="rj">Rio de Janeiro</option>
-                    <option value="mg">Minas Gerais</option>
-                </select>
-            </fieldset>
-
-            <fieldset>
-                <legend>Áreas interese</legend>
-                <label><input type="checkbox" name="html" value="HTML">HTML</label>
-                <label><input type="checkbox" name="css" value="CSS">CSS</label>
-                <label><input type="checkbox" name="js" value="JS">JS</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>Mensagem</legend>
-                <textarea style="resize: none;" name="msg" id="msgDigitada" cols="30" rows="10"></textarea>
-                <textarea style="resize: none;" name="contrato" id="msgContrato" cols="30" rows="10" readonly>Você precisa aceitar os termos abaixo:</textarea>
-                <label><input type="checkbox" checked>Li e aceito</label>
-            </fieldset>
-            
-            <input type="submit" value="Mandar" id="enviar"> <br>
-            <input type="file" name="" id="">
-            <input type="hidden" name="" id="">
-            <input type="button" name="" value="Botão" id="">
-            <input type="reset" name="" id="">
-            <input type="tel" name="" id="">
-            <input type="url" name="" id="">
-            <input type="range" name="" id="" min="0" max="10" step="2">
-            <input type="time" name="" id="">
-            <input type="color" name="" id="">
-
-            <label for="numero">Número:</label>
-                <select name="numeroSelect" id="num" multiple size="4">
-                    <option value="1">Número 1</option>
-                    <option value="2">Número 2</option>
-                    <option value="3">Número 3</option>
-                    <option value="3">Número 4</option>
-                    <option value="3">Número 5</option>
-                    <option value="3">Número 6</option>
-                    <option value="3">Número 7</option>
-                </select>
-                
-        </form>
-
-    </body>
-    
+      <label for="numero">Número:</label>
+      <select name="numeroSelect" id="num" multiple size="4">
+        <option value="1">Número 1</option>
+        <option value="2">Número 2</option>
+        <option value="3">Número 3</option>
+        <option value="3">Número 4</option>
+        <option value="3">Número 5</option>
+        <option value="3">Número 6</option>
+        <option value="3">Número 7</option>
+      </select>
+    </form>
+  </body>
 </html>

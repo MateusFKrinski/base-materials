@@ -1,100 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <head>
+    <title>Pseudo</title>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      input[type="checkbox"] {
+        width: 100px;
+        height: 100px;
+      }
 
-        <title>Pseudo</title>
+      input[type="checkbox"]:checked {
+        width: 50px;
+        height: 50px;
+      }
 
-        <style>
+      button:disabled {
+        background-color: aqua;
+      }
 
-            input[type='checkbox']{
-                width: 100px;
-                height: 100px;
-            }
+      p:empty::before {
+        content: "parágrafo vazio nao da, né!";
+      }
 
-            input[type='checkbox']:checked{
-                width: 50px;
-                height: 50px;
-            }
+      a:focus,
+      a:hover {
+        color: red;
+      }
 
-            button:disabled{
-                background-color: aqua;
-            }
+      input[type="text"] {
+        display: block;
+      }
 
-            p:empty::before{
-                content: "parágrafo vazio nao da, né!";
-            }
+      div p:nth-of-type(4) {
+        color: red;
+      }
+    </style>
+  </head>
 
-            a:focus, a:hover{
-                color: red;
-            }
+  <body>
+    <label>
+      <input type="checkbox" value="sim" />
+      aceito o contrato
+    </label>
 
-            input[type='text']{
-                display: block;
-            }
+    <button>insert</button>
 
-            div p:nth-of-type(4){
-                color: red;
-            }
+    <button disabled>clear</button>
 
-        </style>
+    <p>parágrafo 01</p>
+    <p></p>
 
-    </head>
+    <ul>
+      <li><a href="#">link falso</a></li>
+      <li><a href="#">link falso</a></li>
+      <li><a href="#">link falso</a></li>
+      <li><a href="#">link falso</a></li>
+      <li><a href="#">link falso</a></li>
+    </ul>
 
-    <body>
+    <input type="text" />
+    <input type="text" value="valor inicial" />
+    <input type="text" value="valor inicial" readonly />
+    <input type="text" value="valor inicial" disabled />
+    <input type="text" placeholder="valor inicial" />
 
-        <label>
-            <input type="checkbox" value="sim">
-            aceito o contrato
-        </label>
-
-        <button>
-            insert
-        </button>
-
-        <button disabled>
-            clear
-        </button>
-
-        <p>parágrafo 01</p>
-        <p></p>
-
-        <ul>
-            <li><a href="#">link falso</a></li>
-            <li><a href="#">link falso</a></li>
-            <li><a href="#">link falso</a></li>
-            <li><a href="#">link falso</a></li>
-            <li><a href="#">link falso</a></li>
-        </ul>
-
-        <input type="text">
-        <input type="text" value="valor inicial">
-        <input type="text" value="valor inicial" readonly>
-        <input type="text" value="valor inicial" disabled>
-        <input type="text" placeholder="valor inicial">
-
-        <div>
-            <p>meu paragrafo</p>
-            <p>meu paragrafo</p>
-            <hr>
-            <p class="destaque">meu paragrafo</p>
-            <p>meu paragrafo</p>
-            <hr>
-            <p>meu paragrafo</p>
-            <p>meu paragrafo</p>
-            <hr>
-            <p class="destaque">meu paragrafo</p>
-            <p>meu paragrafo</p>
-            <hr>
-            <p>meu paragrafo</p>
-            <p>meu paragrafo</p>
-            <hr>
-        </div>
-
-    </body>
-    
+    <div>
+      <p>meu paragrafo</p>
+      <p>meu paragrafo</p>
+      <hr />
+      <p class="destaque">meu paragrafo</p>
+      <p>meu paragrafo</p>
+      <hr />
+      <p>meu paragrafo</p>
+      <p>meu paragrafo</p>
+      <hr />
+      <p class="destaque">meu paragrafo</p>
+      <p>meu paragrafo</p>
+      <hr />
+      <p>meu paragrafo</p>
+      <p>meu paragrafo</p>
+      <hr />
+    </div>
+  </body>
 </html>
